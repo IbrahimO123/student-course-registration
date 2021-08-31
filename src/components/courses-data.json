@@ -1,0 +1,100 @@
+[
+        {
+        "courseId" : 1,
+        "courseTitle" : "Basic Hardware Maintenance",
+        "courseCode" : "COM 223",
+        "courseUnit" : 2,
+        "courseType" : "Core Course"
+      },
+       {
+         "courseId" : 2,
+         "courseTitle" : "Electric Circuit Theory II",
+         "courseCode" : "EEC 222",
+         "courseUnit" : 2,
+         "courseType" : "Core Course"
+ 
+      },
+      {
+       "courseId" : 3,
+       "courseTitle" : "Electronics III",
+       "courseCode" : "EEC 224",
+       "courseUnit" : 2,
+       "courseType" : "Core Course"
+ 
+    },
+    {
+     "courseId" : 4,
+     "courseTitle" : "Electrical Power III",
+     "courseCode" : "EEC 221",
+     "courseUnit" : 2,
+     "courseType" : "Core Course"
+  },
+  {
+   "courseId" : 5,
+   "courseTitle" : "Project",
+   "courseCode" : "EEC 228",
+   "courseUnit" : 2,
+   "courseType" : "Core Course"
+ 
+ },
+ {
+   "courseId" : 6,
+   "courseTitle" : "Elect/Elect Installation Design & Drafting",
+   "courseCode" : "EEC 227",
+   "courseUnit" : 2,
+   "courseType" : "Core Course"
+ 
+ },
+ {
+   "courseId" : 7,
+   "courseTitle" : "Telecoms II",
+   "courseCode" : "EEC 225",
+   "courseUnit" : 2,
+   "courseType" : "Core Course"
+ 
+ },
+ {
+   "courseId" : 8,
+   "courseTitle" : "Workshop Orgainisation & Management",
+   "courseCode" : "EEC 226",
+   "courseUnit" : 2,
+   "courseType" : "Core Course"
+ },
+ {
+   "courseId" : 9,
+   "courseTitle" : "General Calculus",
+   "courseCode" : "MTH 221",
+   "courseUnit" : 2,
+   "courseType" : "Restricted Elective"
+ },
+ {
+   "courseId" : 10,
+   "courseTitle" : "Communication English",
+   "courseCode" : "GNS 202",
+   "courseUnit" : 2,
+   "courseType" : "Restricted Elective"
+ },
+ {
+   "courseId" : 11,
+   "courseTitle" : "Electrical Power II",
+   "courseCode" : "EEC 211",
+   "courseUnit" : 2,
+   "courseType" : "Core Course"
+ },
+ {
+   "courseId" : 12,
+   "courseTitle" : "Electrical Power I",
+   "courseCode" : "EEC 121",
+   "courseUnit" : 2,
+   "courseType" : "Core Course"
+ },
+ {
+   "courseId" : 13,
+   "courseTitle" : "Electrical Machines I",
+   "courseCode" : "EEC 123",
+   "courseUnit" : 2,
+   "courseType" : "Core Course"
+ }
+ 
+ ]
+

@@ -1,0 +1,51 @@
+#body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: whitesmoke;
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+}
+#container {
+    width: 25%;
+}
+.img{
+    width: 50px;
+}
+.show {
+    margin-right: 1px;
+    height:10px;
+}
+.show-text {
+    font-size: 11px;
+}
+
+
+@media screen and (max-width:840px){
+    #container{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:513px){
+    #container{
+        width: 75%;
+    }
+
+}
+@media screen and (max-width:350px){
+    #container{
+        width: 100%;
+    }
+
+}
+
+#foot{
+    font-size: 14px;
+}
+
+.logo2 {
+    width: 100px
+}
