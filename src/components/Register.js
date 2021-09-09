@@ -1,35 +1,52 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState, useCallback, useEffect } from 'react'
 import FutaLogo from '../Images/Logo/futaLogo.png'
-import data from './courses-data.json'
-//import bg_2 from '../Images/bg-2/bg_2.png'
 
 function Register() {
     /* const styleReg = {
          backgroundImage : `url(${bg_2})`
      } */
-
-
 /////////////////////////////--------------------------Course Change------------------///////////////////////////////
-const [courses, setCourses] = useState([]);
-const [addcourse, setAddcourse] = useState('')
+const [course, setcourse] = useState([]);
+let [courselist, setCourseList] = useState([]);
+ const fetchData = useCallback( () => {
+   fetch('./data.json')
+   .then(response => response.json())
+   .then(data => {
+     setCourseList(data)
+   })
+ }, [])
+  useEffect( () => {
+    fetchData()},
+    [fetchData]
+  )
+
+//const [addcourse, setAddcourse] = useState('')
 const selectCourse = (e) => {
   const selectedCourseId =  e.target.value;
-  const selectedCourseState = data.filter(
+  const selectedcoursetate = courselist.filter(
     (e) => e.courseId === Number(selectedCourseId)
   )[0];
-  setCourses(selectedCourseState);
-  console.log(selectedCourseId)
-  console.log(selectedCourseState)
+  setcourse(selectedcoursetate);
 };
-useEffect(
-   () => {
-     setCourses(data[1]);
-   }, []
- );
- const includeCourse = (e) => {
-   selectCourse()
- }
+// useEffect(
+//    () => {
+//      setcourse([
+//        ...data,
+//        {
+//         data
+//        }
+//      ]);
+//    },[]
+//  );
+//  const includeCourse = (e) => {
 
+//    setcourse([
+//     ...data,
+//     {
+//       data
+//     }
+//    ])
+//  }
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
      const student = {
        full_name : "Oliyide Ibrahim Owolabi",
@@ -38,8 +55,7 @@ useEffect(
        programme : "300 Full Time",
        school : "Faulty Of Engineering",
      }
-     const today = Date();
-    
+     const today = Date();  
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
 ////////////////////////////////////-------------Course Details--------------------///////////////////////////////////
 // const selectCourse = (event) => {
@@ -56,7 +72,6 @@ useEffect(
 //   console.log(code.value);
 // } ;
 // selectCourse()
-
 ///////////////////////////////////----------------Return HTML---------------/////////////////////////////////////////
     return (
         <div className="container">
@@ -119,7 +134,8 @@ useEffect(
                 <div>
                 <table className="table">
   <thead>
-    <tr>
+   <tr name="heading" id="heading" >
+      <th scope="col">S/N</th>
       <th scope="col col-2">Course Title</th>
       <th scope="col">Course Code</th>
       <th scope="col">Course Unit</th>
@@ -130,10 +146,12 @@ useEffect(
   <tbody>
       
             <tr >
+            <td> 1 </td>
             <td>
               <select
+              name="course1"
               className="custom-select"
-              value={courses?.courseId}
+              value={course?.courseId}
               onChange={(e)=>
               {
                 selectCourse(e)
@@ -141,7 +159,7 @@ useEffect(
               }
                >
               {
-                data.map((e) => (
+                courselist.map((e) => (
                   <option key={e.courseId} value={e.courseId} >
                      {e.courseTitle}
                   </option>
@@ -150,14 +168,14 @@ useEffect(
               }
               </select>
             </td>
-            {courses ? (
-            <td value={courses?.courseCode} >{courses?.courseCode}</td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
             ) : ( "") }
-            {courses ? (
-            <td value={courses?.courseUnit} >{courses?.courseUnit}</td>
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
             ) : ( "") }
-            {courses ? (
-            <td value={courses?.courseType} >{courses?.courseType}</td>
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -167,11 +185,385 @@ useEffect(
         </select>
       </td>
             </tr>
+
+            
+            <tr >
+            <td> 2 </td>
+            <td>
+              <select
+              name="course2"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+            
+            <tr>
+            <td> 3 </td>
+            <td>
+              <select
+              name="course3"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+                      
+            <tr >
+            <td> 4 </td>
+            <td>
+              <select
+              name="course3"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+
+                      
+            <tr>
+            <td> 5 </td>
+            <td>
+              <select
+              name="course3"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+                      
+            <tr>
+            <td> 6 </td>
+            <td>
+              <select
+              name="course3"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+                      
+            <tr>
+            <td> 7 </td>
+            <td>
+              <select
+              name="course3"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+                      
+            <tr>
+            <td> 8 </td>
+            <td>
+              <select
+              name="course8"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+                      
+            <tr>
+            <td> 9 </td>
+            <td>
+              <select
+              name="course9"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+                      
+            <tr>
+            <td> 10 </td>
+            <td>
+              <select
+              name="course3"
+              className="custom-select"
+              value={course?.courseId}
+              onChange={(e)=>
+              {
+                selectCourse(e)
+              }
+              }
+               >
+              {
+                courselist.map((e) => (
+                  <option key={e.courseId} value={e.courseId} >
+                     {e.courseTitle}
+                  </option>
+                )
+                )
+              }
+              </select>
+            </td>
+            {course ? (
+            <td value={course?.courseCode} >{course?.courseCode}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            ) : ( "") }
+            {course ? (
+            <td value={course?.courseType} >{course?.courseType}</td>
+            ) : ( "") }
+           
+            <td>
+        <select className="custom-select" >
+          <option>New</option>
+          <option>Carryover</option>
+        </select>
+      </td>
+            </tr>
+
+            
+      
   </tbody>
 </table>
-<div>
+{/* <div>
 <button onClick={includeCourse} className="btn btn-sm bg-primary" >Add Course</button>
-</div>
+</div> */}
  <div>
     <p>
       Total Max Unit: 23
@@ -183,14 +575,14 @@ useEffect(
                 </div>
             </div>
             <div>
-            <p>Student's Signature ........................................................................................................... Date ...............................................................</p>
+            <p>Student's Signature ......................................................................................................................................................... Date...................................................................................................................</p>
                                  <p>FOR OFFICIAL USE ONLY</p>
              <p>Approval of Departmental Registration Officer</p>
-             <p> Name/Signature ............................................................................................................. Date .....................................................</p>
+             <p> Name/Signature ................................................................................................................................................................ Date .................................................................................................................</p>
              <p>Approval of Head Of Department</p>
-             <p> Name/Signature ............................................................................................................. Date .....................................................</p>
+             <p> Name/Signature ................................................................................................................................................................ Date .................................................................................................................</p>
              <p>Endorsement of School Officer [for Dean]</p>
-                 <p> Name/Signature ............................................................................................................. Date .....................................................</p>
+                 <p> Name/Signature ..................................................................................................................................................................... Date ............................................................................................................</p>
             
             </div>
         </div>

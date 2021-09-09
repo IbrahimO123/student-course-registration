@@ -1,56 +1,69 @@
 [
         {
+          "value" : 1,
         "courseId" : 1,
         "courseTitle" : "Basic Hardware Maintenance",
         "courseCode" : "COM 223",
         "courseUnit" : 2,
-        "courseType" : "Core Course"
+        "courseType" : "Core Course",
+        "label"  : "Basic Hardware Maintenance"
       },
        {
+         "value" : 2,
          "courseId" : 2,
          "courseTitle" : "Electric Circuit Theory II",
          "courseCode" : "EEC 222",
          "courseUnit" : 2,
-         "courseType" : "Core Course"
+         "courseType" : "Core Course",
+         "label" : "Electric Circuit Theory II"
  
       },
       {
+        "value" : 3,
        "courseId" : 3,
        "courseTitle" : "Electronics III",
        "courseCode" : "EEC 224",
        "courseUnit" : 2,
-       "courseType" : "Core Course"
+       "courseType" : "Core Course",
+       "label" : "Electronics III"
  
     },
     {
+      "value" : 4 ,
      "courseId" : 4,
      "courseTitle" : "Electrical Power III",
      "courseCode" : "EEC 221",
      "courseUnit" : 2,
-     "courseType" : "Core Course"
+     "courseType" : "Core Course",
+     "label" : "Electrical Power III"
   },
   {
+    "value": 5,
    "courseId" : 5,
    "courseTitle" : "Project",
    "courseCode" : "EEC 228",
    "courseUnit" : 2,
-   "courseType" : "Core Course"
+   "courseType" : "Core Course",
+   "label" : "Project"
  
  },
  {
+   "value" : 6,
    "courseId" : 6,
    "courseTitle" : "Elect/Elect Installation Design & Drafting",
    "courseCode" : "EEC 227",
    "courseUnit" : 2,
-   "courseType" : "Core Course"
- 
+   "courseType" : "Core Course",
+   "label" : "Elect/Elect Installation Design & Drafting"  
  },
  {
+   "value" : 7,
    "courseId" : 7,
    "courseTitle" : "Telecoms II",
    "courseCode" : "EEC 225",
    "courseUnit" : 2,
-   "courseType" : "Core Course"
+   "courseType" : "Core Course",
+   "label" : "Telecom II"
  
  },
  {

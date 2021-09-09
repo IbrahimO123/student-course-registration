@@ -31,7 +31,7 @@ function Login() {
                `url(${bg2})`,
                `url(${bg3})`,
             ]
-            const changingImages = Images[Math.floor(Math.random() * (Images.length) )];
+            const changingImages = Images[Math.floor(Math.random() * (Images.length))];
             bgImage.style.backgroundImage = changingImages
             
        //     var images = [];
@@ -42,10 +42,8 @@ function Login() {
        //     images[0] = pic1;
        //     images[1] = pic2;
        //     images[2] = pic3;
-   
-   
         } 
-     setInterval(ChangingBackground,10000)
+     setInterval(ChangingBackground,40000)
     return (
         <div className="container-fluid mx-auto mt-5">
             <div className="container py-3 bg-light" id="container">
