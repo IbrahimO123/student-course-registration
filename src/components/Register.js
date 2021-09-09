@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useEffect } from 'react'
+import React, {useState, useCallback, useEffect, useRef } from 'react'
 import FutaLogo from '../Images/Logo/futaLogo.png'
 
 function Register() {
@@ -6,7 +6,16 @@ function Register() {
          backgroundImage : `url(${bg_2})`
      } */
 /////////////////////////////--------------------------Course Change------------------///////////////////////////////
-const [course, setcourse] = useState([]);
+const [course, setCourse] = useState([]);
+const [course2, setCourse2] = useState([]);
+const [course3, setCourse3] = useState([]);
+const [course4, setCourse4] = useState([]);
+const [course5, setCourse5] = useState([]);
+const [course6, setCourse6] = useState([]);
+const [course7, setCourse7] = useState([]);
+const [course8, setCourse8] = useState([]);
+const [course9, setCourse9] = useState([]);
+const [course10, setCourse10] = useState([]);
 let [courselist, setCourseList] = useState([]);
  const fetchData = useCallback( () => {
    fetch('./data.json')
@@ -19,33 +28,79 @@ let [courselist, setCourseList] = useState([]);
     fetchData()},
     [fetchData]
   )
-
-//const [addcourse, setAddcourse] = useState('')
 const selectCourse = (e) => {
   const selectedCourseId =  e.target.value;
   const selectedcoursetate = courselist.filter(
     (e) => e.courseId === Number(selectedCourseId)
   )[0];
-  setcourse(selectedcoursetate);
+  setCourse(selectedcoursetate);
 };
-// useEffect(
-//    () => {
-//      setcourse([
-//        ...data,
-//        {
-//         data
-//        }
-//      ]);
-//    },[]
-//  );
-//  const includeCourse = (e) => {
+const selectCourse2 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse2(selectedcoursetate);
+};
+const selectCourse3 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse3(selectedcoursetate);
+};
+const selectCourse4 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse4(selectedcoursetate);
+};
+const selectCourse5 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse5(selectedcoursetate);
+};
+const selectCourse6 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse6(selectedcoursetate);
+};
+const selectCourse7 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse7(selectedcoursetate);
+};
+const selectCourse8 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse8(selectedcoursetate);
+};
+const selectCourse9 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse9(selectedcoursetate);
+};
+const selectCourse10 = (e) => {
+  const selectedCourseId =  e.target.value;
+  const selectedcoursetate = courselist.filter(
+    (e) => e.courseId === Number(selectedCourseId)
+  )[0];
+  setCourse10(selectedcoursetate);
+};
+let unit1 = useRef(Number(""))
+console.log(unit1)
 
-//    setcourse([
-//     ...data,
-//     {
-//       data
-//     }
-//    ])
 //  }
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
      const student = {
@@ -57,30 +112,15 @@ const selectCourse = (e) => {
      }
      const today = Date();  
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
-////////////////////////////////////-------------Course Details--------------------///////////////////////////////////
-// const selectCourse = (event) => {
-//   //let title = document.querySelector('#title');
-//   let unit = document.getElementById('unit');
-//   let code = document.getElementById('code')
-//   event.value = courseDetails[0].courseTitle
-//   if ( event.value === courseDetails[0].courseTitle) {
-//     unit.value = courseDetails[0].courseUnit;
-//     code.value = courseDetails[0].courseCode;
-//   }
-//   ;
-//   console.log(unit.value);
-//   console.log(code.value);
-// } ;
-// selectCourse()
 ///////////////////////////////////----------------Return HTML---------------/////////////////////////////////////////
     return (
         <div className="container">
-        <header className="display-6 text-center" >
+        <header className="text-center" >
         <img className="img img-fluid mt-n5 pt-2 logo2" alt="Futa Logo" src={FutaLogo} ></img> 
         <div className="w-75 d-inline-block" >
-               FEDERAL UNIVERSITY OF TECHNOLOGY, AKURE
-                <p>PMB 704, AKURE, ONDO STATE OF NIGERIA</p>
-             <p className=""> COURSE REGISTRATION </p>
+               <p className="display-6" >FEDERAL UNIVERSITY OF TECHNOLOGY, AKURE</p>
+                <p className="" >PMB 704, AKURE, ONDO STATE OF NIGERIA</p>
+             <p className="h5"> COURSE REGISTRATION </p>
         </div>
         </header>
             <div className="container py-5">
@@ -138,14 +178,14 @@ const selectCourse = (e) => {
       <th scope="col">S/N</th>
       <th scope="col col-2">Course Title</th>
       <th scope="col">Course Code</th>
-      <th scope="col">Course Unit</th>
+      <th ref={unit1} scope="col">Course Unit</th>
       <th scope="col">Course Type</th>
       <th scope="col">Curriculum</th>
     </tr>
   </thead>
   <tbody>
       
-            <tr >
+            <tr name="course1" >
             <td> 1 </td>
             <td>
               <select
@@ -172,7 +212,7 @@ const selectCourse = (e) => {
             <td value={course?.courseCode} >{course?.courseCode}</td>
             ) : ( "") }
             {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            <td id="courseUnit1" value={course?.courseUnit} >{course?.courseUnit}</td>
             ) : ( "") }
             {course ? (
             <td value={course?.courseType} >{course?.courseType}</td>
@@ -187,16 +227,16 @@ const selectCourse = (e) => {
             </tr>
 
             
-            <tr >
+            <tr name="course2"  >
             <td> 2 </td>
             <td>
               <select
               name="course2"
               className="custom-select"
-              value={course?.courseId}
+              value={course2?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse2(e)
               }
               }
                >
@@ -210,14 +250,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course2 ? (
+            <td value={course2?.courseCode} >{course2?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course2 ? (
+            <td value={course2?.courseUnit} >{course2?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course2 ? (
+            <td value={course2?.courseType} >{course2?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -228,16 +268,16 @@ const selectCourse = (e) => {
       </td>
             </tr>
             
-            <tr>
+            <tr name="course3">
             <td> 3 </td>
             <td>
               <select
               name="course3"
               className="custom-select"
-              value={course?.courseId}
+              value={course3?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse3(e)
               }
               }
                >
@@ -251,14 +291,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course3 ? (
+            <td value={course3?.courseCode} >{course3?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course3 ? (
+            <td value={course3?.courseUnit} >{course3?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course3 ? (
+            <td value={course3?.courseType} >{course3?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -269,16 +309,16 @@ const selectCourse = (e) => {
       </td>
             </tr>
                       
-            <tr >
+            <tr name="course4" >
             <td> 4 </td>
             <td>
               <select
-              name="course3"
+              name="course4"
               className="custom-select"
-              value={course?.courseId}
+              value={course4?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse4(e)
               }
               }
                >
@@ -292,14 +332,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course4 ? (
+            <td value={course4?.courseCode} >{course4?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course4 ? (
+            <td value={course4?.courseUnit} >{course4?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course4 ? (
+            <td value={course4?.courseType} >{course4?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -311,16 +351,16 @@ const selectCourse = (e) => {
             </tr>
 
                       
-            <tr>
+            <tr name="course5">
             <td> 5 </td>
             <td>
               <select
-              name="course3"
+              name="course5"
               className="custom-select"
-              value={course?.courseId}
+              value={course5?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse5(e)
               }
               }
                >
@@ -334,14 +374,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course5 ? (
+            <td value={course5?.courseCode} >{course5?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course5 ? (
+            <td value={course5?.courseUnit} >{course5?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course5 ? (
+            <td value={course5?.courseType} >{course5?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -352,16 +392,16 @@ const selectCourse = (e) => {
       </td>
             </tr>
                       
-            <tr>
+            <tr name="course6">
             <td> 6 </td>
             <td>
               <select
-              name="course3"
+              name="course6"
               className="custom-select"
-              value={course?.courseId}
+              value={course6?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse6(e)
               }
               }
                >
@@ -375,14 +415,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course6 ? (
+            <td value={course6?.courseCode} >{course6?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course6 ? (
+            <td value={course6?.courseUnit} >{course6?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course6 ? (
+            <td value={course6?.courseType} >{course6?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -397,12 +437,12 @@ const selectCourse = (e) => {
             <td> 7 </td>
             <td>
               <select
-              name="course3"
+              name="course7"
               className="custom-select"
-              value={course?.courseId}
+              value={course7?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse7(e)
               }
               }
                >
@@ -416,14 +456,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course7 ? (
+            <td value={course7?.courseCode} >{course7?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course7 ? (
+            <td value={course7?.courseUnit} >{course7?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course7 ? (
+            <td value={course7?.courseType} >{course7?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -440,10 +480,10 @@ const selectCourse = (e) => {
               <select
               name="course8"
               className="custom-select"
-              value={course?.courseId}
+              value={course8?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse8(e)
               }
               }
                >
@@ -457,14 +497,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course8 ? (
+            <td value={course8?.courseCode} >{course8?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course8 ? (
+            <td value={course8?.courseUnit} >{course8?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course8 ? (
+            <td value={course8?.courseType} >{course8?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -481,10 +521,10 @@ const selectCourse = (e) => {
               <select
               name="course9"
               className="custom-select"
-              value={course?.courseId}
+              value={course9?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse9(e)
               }
               }
                >
@@ -498,14 +538,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course9 ? (
+            <td value={course9?.courseCode} >{course9?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course9 ? (
+            <td value={course9?.courseUnit} >{course9?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course9 ? (
+            <td value={course9?.courseType} >{course9?.courseType}</td>
             ) : ( "") }
            
             <td>
@@ -520,12 +560,12 @@ const selectCourse = (e) => {
             <td> 10 </td>
             <td>
               <select
-              name="course3"
+              name="course10"
               className="custom-select"
-              value={course?.courseId}
+              value={course10?.courseId}
               onChange={(e)=>
               {
-                selectCourse(e)
+                selectCourse10(e)
               }
               }
                >
@@ -539,14 +579,14 @@ const selectCourse = (e) => {
               }
               </select>
             </td>
-            {course ? (
-            <td value={course?.courseCode} >{course?.courseCode}</td>
+            {course10 ? (
+            <td value={course10?.courseCode} >{course10?.courseCode}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseUnit} >{course?.courseUnit}</td>
+            {course10 ? (
+            <td value={course10?.courseUnit} >{course10?.courseUnit}</td>
             ) : ( "") }
-            {course ? (
-            <td value={course?.courseType} >{course?.courseType}</td>
+            {course10 ? (
+            <td value={course10?.courseType} >{course10?.courseType}</td>
             ) : ( "") }
            
             <td>
