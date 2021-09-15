@@ -22,5 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# file not to include
+# files not to include to github by Ibrahim Oliyide
 src/components/LearnNode.js
+src/components/Timer.js
