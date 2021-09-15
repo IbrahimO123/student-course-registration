@@ -98,8 +98,21 @@ const selectCourse10 = (e) => {
   )[0];
   setCourse10(selectedcoursetate);
 };
-let unit1 = useRef(Number(""))
-console.log(unit1)
+const table = useRef(' ');
+
+const AddUnitValue = () => {
+  let trLength =  document.querySelectorAll("tbody tr").length
+  console.log(trLength);
+ 
+  // var sumValue = 0;
+   for (let i = 1; i < trLength; i++) {
+     let total = table.current.rows[i].cellIndex[3].innerHTML
+    console.log(total);
+    // sumValue = sumValue + table.current.rows[i].innerHTML;
+     //console.log(sumValue)
+   };
+};
+
 
 //  }
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
@@ -172,13 +185,13 @@ console.log(unit1)
                     
                 </select>
                 <div>
-                <table className="table">
+                <table id="table" ref={table} className="table">
   <thead>
    <tr name="heading" id="heading" >
       <th scope="col">S/N</th>
       <th scope="col col-2">Course Title</th>
       <th scope="col">Course Code</th>
-      <th ref={unit1} scope="col">Course Unit</th>
+      <th scope="col" id="unit" >Course Unit</th>
       <th scope="col">Course Type</th>
       <th scope="col">Curriculum</th>
     </tr>
@@ -608,8 +621,8 @@ console.log(unit1)
     <p>
       Total Max Unit: 23
     </p>
-    <p id='foot' >
-      Total Selected Unit: 23
+    <p    id='unitSelected' >
+    <button onClick={AddUnitValue()} > </button>  
     </p>
   </div>
                 </div>
