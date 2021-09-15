@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@1&display=swap');
+
 #body {
     background-size: cover;
     background-repeat: no-repeat;
@@ -6,6 +8,12 @@
     transition-duration: 3s;
     transition-timing-function: linear;
     transition-delay: 0;
+}
+#register {
+    font-family: 'Cantarell', sans-serif;
+}
+.post {
+    font-size: 17px;
 }
 #container {
     width: 25%;

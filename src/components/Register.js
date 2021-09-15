@@ -102,14 +102,24 @@ const table = useRef(' ');
 
 const AddUnitValue = () => {
   let trLength =  document.querySelectorAll("tbody tr").length
-  console.log(trLength);
- 
-  // var sumValue = 0;
+  let sumValue = 0;
    for (let i = 1; i < trLength; i++) {
-     let total = table.current.rows[i].cellIndex[3].innerHTML
-    console.log(total);
-    // sumValue = sumValue + table.current.rows[i].innerHTML;
-     //console.log(sumValue)
+     let totalUnit = document.querySelector("#table")
+    sumValue = sumValue + parseInt(Number(totalUnit.rows[i].cells[3].innerHTML));
+     console.log(sumValue)
+     let totalCourseUnit = 10;
+     let unClickable = document.querySelector('#submit');
+     let max_unit = document.querySelector("#max_unit")
+     console.log(unClickable)
+     if (sumValue > totalCourseUnit ) {
+       unClickable.disabled = true;
+       max_unit.innerHTML += `Total Selected Unit: ${sumValue}`
+       
+
+     }
+     else {
+       unClickable.disabled = false;
+     }
    };
 };
 
@@ -127,29 +137,30 @@ const AddUnitValue = () => {
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
 ///////////////////////////////////----------------Return HTML---------------/////////////////////////////////////////
     return (
-        <div className="container">
+        <div className="container bg-info border border-dark" id="register">
+        <form>
         <header className="text-center" >
         <img className="img img-fluid mt-n5 pt-2 logo2" alt="Futa Logo" src={FutaLogo} ></img> 
         <div className="w-75 d-inline-block" >
                <p className="display-6" >FEDERAL UNIVERSITY OF TECHNOLOGY, AKURE</p>
-                <p className="" >PMB 704, AKURE, ONDO STATE OF NIGERIA</p>
+                <p className="post" >PMB 704, AKURE, ONDO STATE OF NIGERIA</p>
              <p className="h5"> COURSE REGISTRATION </p>
         </div>
         </header>
-            <div className="container py-5">
-            </div>
-                
-                <div>
-                    <p>{student.full_name.toUpperCase()}</p>
+            <div className="container py-5">    
+                <div className="w-50 clearfix">
+                    <p >{student.full_name.toUpperCase()}</p>
                     <p>Reg./Matric No: {student.matric_No}</p>
-                    <p>School: {student.school}</p>
+                    <p >School: {student.school}</p>
                     <p>Course Of Study: {student.department}</p>
                     <p>Phone No/Email: (+234)9038961332/oliyideibrahim123@gmail.com</p>
                     <p>Date: {today}</p>
                 </div>
-            <div>
+                
+                <div className="d-flex justify-content-between" >
+            <div >
             <label htmlFor="session" >Session:</label>
-                <select className="custom-select" id="session">
+                <select className="custom-select" name="session" id="session">
                     <option value="2023/2024" > 2023/2024</option>
                     <option value="2022/2023" > 2022/2023</option>
                     <option value="2021/2022" > 2021/2022</option>
@@ -169,14 +180,14 @@ const AddUnitValue = () => {
             </div>
             <div>
             <label htmlFor="semester" >Semester:</label>
-                <select  className="custom-select d-inline" id="semester">
+                <select  className="custom-select d-inline" name="semester" id="semester">
                     <option value="Second Semester" > Second Semester</option>
                     <option value="First Semester" > First Semester</option>
                 </select>
             </div>
             <div>
-            <label htmlFor="semester" >Level:</label>
-                <select id="semester" className="custom-select d-inline"  placeholder="Choose Level" >
+            <label htmlFor="level" >Level:</label>
+                <select id="level" name="level" className="custom-select d-inline"  placeholder="Choose Level" >
                     <option value="500" > 500</option>
                     <option value="400" > 400</option>
                     <option value="300" > 300</option>
@@ -184,16 +195,19 @@ const AddUnitValue = () => {
                     <option value="100" > 100</option>
                     
                 </select>
-                <div>
-                <table id="table" ref={table} className="table">
+            </div>
+            </div>
+        </div>
+  <div>
+  <table id="table" name="table" ref={table} className="table table-primary table-bordered">
   <thead>
-   <tr name="heading" id="heading" >
-      <th scope="col">S/N</th>
-      <th scope="col col-2">Course Title</th>
-      <th scope="col">Course Code</th>
-      <th scope="col" id="unit" >Course Unit</th>
-      <th scope="col">Course Type</th>
-      <th scope="col">Curriculum</th>
+   <tr name="heading" id="heading" onLoad={AddUnitValue()} >
+      <th name="s/n" scope="col">S/N</th>
+      <th name="course_title" scope="col col-2">Course Title</th>
+      <th name="course_code" scope="col">Course Code</th>
+      <th name="course_unit" scope="col" id="unit" >Course Unit</th>
+      <th name="course_type" scope="col">Course Type</th>
+      <th name="curriculum" scope="col">Curriculum</th>
     </tr>
   </thead>
   <tbody>
@@ -617,16 +631,14 @@ const AddUnitValue = () => {
 {/* <div>
 <button onClick={includeCourse} className="btn btn-sm bg-primary" >Add Course</button>
 </div> */}
- <div>
-    <p>
-      Total Max Unit: 23
+ <div id="complete" >
+    <p id="max_unit">
     </p>
-    <p    id='unitSelected' >
-    <button onClick={AddUnitValue()} > </button>  
+    <p >
+    <button id='submit' name="submit" className="btn btn-sm btn-primary" >Submit</button>  
     </p>
   </div>
                 </div>
-            </div>
             <div>
             <p>Student's Signature ......................................................................................................................................................... Date...................................................................................................................</p>
                                  <p>FOR OFFICIAL USE ONLY</p>
@@ -638,6 +650,7 @@ const AddUnitValue = () => {
                  <p> Name/Signature ..................................................................................................................................................................... Date ............................................................................................................</p>
             
             </div>
+            </form>
         </div>
     )
 }
