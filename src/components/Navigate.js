@@ -10,11 +10,11 @@ function Navigate() {
             </button>
             <div className="collapse navbar-collapse" id="navigation"  >
             <ul className="navbar-nav">
-            <Link className="nav-item nav-link" to='/' > <li>Home</li></Link>
-            <Link  className="nav-item nav-link"to='/' ><li>Administration</li></Link>
-            <Link  className="nav-item nav-link"to='/' ><li>Admission</li></Link>
-            <Link  className="nav-item nav-link"to='/Login'><li>Student's Login Portal</li></Link>
-            <Link  className="nav-item nav-link"to='/Register'><li>Course Registration</li></Link>
+            <Link to='/home' > <li className="nav-item nav-link">Home</li></Link>
+            <Link to='/administration' ><li className="nav-item nav-link" >Administration</li></Link>
+            <Link to='/admission' ><li className="nav-item nav-link" >Admission</li></Link>
+            <Link to='/'><li className="nav-item nav-link" >Student's Login Portal</li></Link>
+            <Link to='/Register'><li className="nav-item nav-link" >Course Registration</li></Link>
             </ul>
             </div>
             </div>
