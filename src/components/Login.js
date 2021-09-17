@@ -31,7 +31,7 @@ function Login() {
                `url(${bg2})`,
                `url(${bg3})`,
             ]
-            const changingImages = Images[Math.floor(Math.random() * (Images.length) + 1)];
+            const changingImages = Images[Math.floor(Math.random() * (Images.length))];
             bgImage.style.backgroundImage = changingImages
             
        //     var images = [];
