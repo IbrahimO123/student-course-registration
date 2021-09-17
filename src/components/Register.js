@@ -649,6 +649,14 @@ const AddUnitValue = () => {
             
             </div>
             </form>
+            <footer className="clear">
+        <div id="bottom">
+            &copy; 2021 Student course registration. All rights reserved. Enjoy responsibly. Do not share this content with minors<br/> Developed by Oliyide Ibrahim Owolabi. All copyright and privacy reserved.
+            <a href="SITEMAP" target="-blank">SiteMap</a>
+            <a href="terms" target="-blank">Terms and Conditions</a>
+            <a href="privacy" target="-blank">Privacy and Cookies</a>
+        </div>
+    </footer>
         </div>
     )
 }
