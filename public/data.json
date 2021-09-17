@@ -107,14 +107,6 @@
    "courseCode" : "EEC 123",
    "courseUnit" : 2,
    "courseType" : "Core Course"
- },
- {
-  "courseId" : 14,
-  "courseTitle" : "Remove",
-  "courseCode" : "",
-  "courseUnit" : 0,
-  "courseType" : ""
-}
- 
+ }
  ]
 
