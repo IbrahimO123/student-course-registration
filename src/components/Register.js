@@ -101,21 +101,19 @@ const selectCourse10 = (e) => {
 const table = useRef(' ');
 
 const AddUnitValue = () => {
-  let trLength =  document.querySelectorAll("tbody tr").length
+  let trLength =  document.querySelectorAll("tr").length
+  console.log(trLength);
   let sumValue = 0;
    for (let i = 1; i < trLength; i++) {
      let totalUnit = document.querySelector("#table")
     sumValue = sumValue + parseInt(Number(totalUnit.rows[i].cells[3].innerHTML));
-     console.log(sumValue)
+    console.log(sumValue);
      let totalCourseUnit = 10;
      let unClickable = document.querySelector('#submit');
      let max_unit = document.querySelector("#max_unit")
-     console.log(unClickable)
      if (sumValue > totalCourseUnit ) {
        unClickable.disabled = true;
        max_unit.innerHTML += `Total Selected Unit: ${sumValue}`
-       
-
      }
      else {
        unClickable.disabled = false;
@@ -199,7 +197,7 @@ const AddUnitValue = () => {
             </div>
         </div>
   <div>
-  <table id="table" name="table" ref={table} className="table table-primary table-bordered">
+  <table id="table" name="table" ref={table} className="container container-fluid table table-primary table-bordered">
   <thead>
    <tr name="heading" id="heading" onLoad={AddUnitValue()} >
       <th name="s/n" scope="col">S/N</th>
@@ -635,19 +633,19 @@ const AddUnitValue = () => {
     <p id="max_unit">
     </p>
     <p >
-    <button id='submit' name="submit" className="btn btn-sm btn-primary" >Submit</button>  
+    <button id='submit' name="submit" className="btn btn-lg btn-primary text-center" >Submit</button>  
     </p>
   </div>
                 </div>
             <div>
-            <p>Student's Signature ......................................................................................................................................................... Date...................................................................................................................</p>
-                                 <p>FOR OFFICIAL USE ONLY</p>
+            <p>Student's Signature ..........................................<input type="file" ></input> Date..............................................................................</p>
+                                 <p className="text-center border border-dark">FOR OFFICIAL USE ONLY</p>
              <p>Approval of Departmental Registration Officer</p>
-             <p> Name/Signature ................................................................................................................................................................ Date .................................................................................................................</p>
+             <p> Name/Signature ................................................<input type="file" ></input>Date .............................................................................</p>
              <p>Approval of Head Of Department</p>
-             <p> Name/Signature ................................................................................................................................................................ Date .................................................................................................................</p>
+             <p> Name/Signature ................................................<input type="file" ></input> Date ..........................................................................</p>
              <p>Endorsement of School Officer [for Dean]</p>
-                 <p> Name/Signature ..................................................................................................................................................................... Date ............................................................................................................</p>
+                 <p> Name/Signature ................................................<input type="file" ></input> Date .......................................................................</p>
             
             </div>
             </form>
