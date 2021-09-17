@@ -120,7 +120,9 @@ const AddUnitValue = () => {
      }
    };
 };
-
+const styleFornav = {
+ paddingTop : 70,
+}
 
 //  }
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
@@ -135,7 +137,7 @@ const AddUnitValue = () => {
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
 ///////////////////////////////////----------------Return HTML---------------/////////////////////////////////////////
     return (
-        <div className="container bg-info border border-dark" id="register">
+        <div className="container bg-info border border-dark" style={styleFornav} id="register">
         <form>
         <header className="text-center" >
         <img className="img img-fluid mt-n5 pt-2 logo2" alt="Futa Logo" src={FutaLogo} ></img> 
@@ -649,14 +651,6 @@ const AddUnitValue = () => {
             
             </div>
             </form>
-            <footer className="clear">
-        <div id="bottom">
-            &copy; 2021 Student course registration. All rights reserved. Enjoy responsibly. Do not share this content with minors<br/> Developed by Oliyide Ibrahim Owolabi. All copyright and privacy reserved.
-            <a href="SITEMAP" target="-blank">SiteMap</a>
-            <a href="terms" target="-blank">Terms and Conditions</a>
-            <a href="privacy" target="-blank">Privacy and Cookies</a>
-        </div>
-    </footer>
         </div>
     )
 }
