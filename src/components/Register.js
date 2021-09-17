@@ -142,7 +142,7 @@ const styleFornav = {
         <header className="text-center" >
         <img className="img img-fluid mt-n5 pt-2 logo2" alt="Futa Logo" src={FutaLogo} ></img> 
         <div className="w-75 d-inline-block" >
-               <p className="display-6" >FEDERAL UNIVERSITY OF TECHNOLOGY, AKURE</p>
+               <p className="heading-5" >FEDERAL UNIVERSITY OF TECHNOLOGY, AKURE</p>
                 <p className="post" >PMB 704, AKURE, ONDO STATE OF NIGERIA</p>
              <p className="h5"> COURSE REGISTRATION </p>
         </div>
@@ -160,7 +160,7 @@ const styleFornav = {
                 <div className="d-flex justify-content-between" >
             <div >
             <label htmlFor="session" >Session:</label>
-                <select className="custom-select" name="session" id="session">
+                <select required className="custom-select" name="session" id="session">
                     <option value="2023/2024" > 2023/2024</option>
                     <option value="2022/2023" > 2022/2023</option>
                     <option value="2021/2022" > 2021/2022</option>
@@ -180,14 +180,14 @@ const styleFornav = {
             </div>
             <div>
             <label htmlFor="semester" >Semester:</label>
-                <select  className="custom-select d-inline" name="semester" id="semester">
+                <select required className="custom-select d-inline" name="semester" id="semester">
                     <option value="Second Semester" > Second Semester</option>
                     <option value="First Semester" > First Semester</option>
                 </select>
             </div>
             <div>
             <label htmlFor="level" >Level:</label>
-                <select id="level" name="level" className="custom-select d-inline"  placeholder="Choose Level" >
+                <select id="level" required name="level" className="custom-select d-inline"  placeholder="Choose Level" >
                     <option value="500" > 500</option>
                     <option value="400" > 400</option>
                     <option value="300" > 300</option>
@@ -198,12 +198,12 @@ const styleFornav = {
             </div>
             </div>
         </div>
-  <div>
-  <table id="table" name="table" ref={table} className="container container-fluid table table-primary table-bordered">
+  <div className="table-responsive" >
+  <table id="table" name="table" ref={table} className="container container-fluid table table-primary table-striped table-hover table-bordered">
   <thead>
    <tr name="heading" id="heading" onLoad={AddUnitValue()} >
       <th name="s/n" scope="col">S/N</th>
-      <th name="course_title" scope="col col-2">Course Title</th>
+      <th name="course_title" scope="col">Course Title</th>
       <th name="course_code" scope="col">Course Code</th>
       <th name="course_unit" scope="col" id="unit" >Course Unit</th>
       <th name="course_type" scope="col">Course Type</th>
@@ -215,7 +215,7 @@ const styleFornav = {
             <tr name="course1" >
             <td> 1 </td>
             <td>
-              <select
+              <select required
               name="course1"
               className="custom-select"
               value={course?.courseId}
@@ -257,7 +257,7 @@ const styleFornav = {
             <tr name="course2"  >
             <td> 2 </td>
             <td>
-              <select
+              <select required
               name="course2"
               className="custom-select"
               value={course2?.courseId}
@@ -298,7 +298,7 @@ const styleFornav = {
             <tr name="course3">
             <td> 3 </td>
             <td>
-              <select
+              <select required
               name="course3"
               className="custom-select"
               value={course3?.courseId}
@@ -339,7 +339,7 @@ const styleFornav = {
             <tr name="course4" >
             <td> 4 </td>
             <td>
-              <select
+              <select required
               name="course4"
               className="custom-select"
               value={course4?.courseId}
@@ -381,7 +381,7 @@ const styleFornav = {
             <tr name="course5">
             <td> 5 </td>
             <td>
-              <select
+              <select required
               name="course5"
               className="custom-select"
               value={course5?.courseId}
@@ -422,7 +422,7 @@ const styleFornav = {
             <tr name="course6">
             <td> 6 </td>
             <td>
-              <select
+              <select required
               name="course6"
               className="custom-select"
               value={course6?.courseId}
