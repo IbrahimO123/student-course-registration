@@ -1,4 +1,3 @@
-import './style/Bootstrap/bootstrap.css'
 import './style/Styling.css'
 import Login from './components/Login.js'
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
@@ -11,7 +10,7 @@ function App() {
      <Router>
      <Navigate/>
      <Switch>
-       <Route path="/" component={Login} />
+       <Route path="/" exact component={Login} />
        <Route path="/Register" component={Register} />
      </Switch>
      </Router>
