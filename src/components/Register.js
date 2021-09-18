@@ -102,13 +102,11 @@ const table = useRef(' ');
 
 const AddUnitValue = () => {
   let trLength =  document.querySelectorAll("tr").length
-  console.log(trLength);
   let sumValue = 0;
    for (let i = 1; i < trLength; i++) {
      let totalUnit = document.querySelector("#table")
     sumValue = sumValue + parseInt(Number(totalUnit.rows[i].cells[3].innerHTML));
-    console.log(sumValue);
-     let totalCourseUnit = 10;
+     let totalCourseUnit = 23;
      let unClickable = document.querySelector('#submit');
      let max_unit = document.querySelector("#max_unit")
      if (sumValue > totalCourseUnit ) {
