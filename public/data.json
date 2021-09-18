@@ -13,7 +13,7 @@
          "courseId" : 2,
          "courseTitle" : "Electric Circuit Theory II",
          "courseCode" : "EEC 222",
-         "courseUnit" : 2,
+         "courseUnit" : 3,
          "courseType" : "Core Course",
          "label" : "Electric Circuit Theory II"
  
@@ -23,7 +23,7 @@
        "courseId" : 3,
        "courseTitle" : "Electronics III",
        "courseCode" : "EEC 224",
-       "courseUnit" : 2,
+       "courseUnit" : 3,
        "courseType" : "Core Course",
        "label" : "Electronics III"
  
@@ -33,7 +33,7 @@
      "courseId" : 4,
      "courseTitle" : "Electrical Power III",
      "courseCode" : "EEC 221",
-     "courseUnit" : 2,
+     "courseUnit" : 3,
      "courseType" : "Core Course",
      "label" : "Electrical Power III"
   },
@@ -42,7 +42,7 @@
    "courseId" : 5,
    "courseTitle" : "Project",
    "courseCode" : "EEC 228",
-   "courseUnit" : 2,
+   "courseUnit" : 4,
    "courseType" : "Core Course",
    "label" : "Project"
  
@@ -61,7 +61,7 @@
    "courseId" : 7,
    "courseTitle" : "Telecoms II",
    "courseCode" : "EEC 225",
-   "courseUnit" : 2,
+   "courseUnit" : 3,
    "courseType" : "Core Course",
    "label" : "Telecom II"
  
