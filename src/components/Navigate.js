@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 
 function Navigate() {
     return (
-        < >
         <nav className="navbar navbar-dark bg-primary navbar-expand-sm fixed-top">
         <div className="container">
         <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navigation"  aria-controls="navigation" aria-expanded="false" aria-label="Toggle Navigation">
@@ -21,7 +20,6 @@ function Navigate() {
             </div>
         </nav>
         
-        </>
 )
 }
 
