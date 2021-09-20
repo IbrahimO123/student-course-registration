@@ -138,21 +138,21 @@ const styleFornav = {
         <div className="container bg-info border border-dark" style={styleFornav} id="register">
         <form>
         <header className="text-center" >
-        <img className="img img-fluid mt-n5 pt-2 logo2" alt="Futa Logo" src={FutaLogo} ></img> 
+        <img className="img img-fluid pt-2 logo2" alt="Futa Logo" src={FutaLogo} ></img> 
         <div className="w-75 d-inline-block" >
-               <p className="heading-5" >FEDERAL UNIVERSITY OF TECHNOLOGY, AKURE</p>
-                <p className="post" >PMB 704, AKURE, ONDO STATE OF NIGERIA</p>
+               <p className="display-6 d-flex flex-column flex-nowrap justify-content-center align-items-cente" >FEDERAL UNIVERSITY OF TECHNOLOGY, AKURE</p>
+                <p className="small" >PMB 704, AKURE, ONDO STATE OF NIGERIA</p>
              <p className="h5"> COURSE REGISTRATION </p>
         </div>
         </header>
             <div className="container py-5">    
-                <div className="w-50 clearfix">
-                    <p >{student.full_name.toUpperCase()}</p>
-                    <p>Reg./Matric No: {student.matric_No}</p>
-                    <p >School: {student.school}</p>
-                    <p>Course Of Study: {student.department}</p>
-                    <p>Phone No/Email: (+234)9038961332/oliyideibrahim123@gmail.com</p>
-                    <p>Date: {today}</p>
+                <div>
+                    <p className="h4 text-center" ><strong>{student.full_name.toUpperCase()}</strong> </p>
+                    <p><strong>Reg./Matric No:</strong> {student.matric_No}</p>
+                    <p><strong>School:</strong> {student.school}</p>
+                    <p><strong>Course Of Study:</strong> {student.department}</p>
+                    <p><strong>Phone No/Email:</strong> (+234)9038961332/oliyideibrahim123@gmail.com</p>
+                    <p><strong>Date:</strong> {today}</p>
                 </div>
                 
                 <div className="d-flex justify-content-between" >
@@ -461,7 +461,7 @@ const styleFornav = {
             <tr>
             <td> 7 </td>
             <td>
-              <select
+              <select required
               name="course7"
               className="custom-select"
               value={course7?.courseId}
