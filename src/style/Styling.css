@@ -10,11 +10,9 @@
     transition-timing-function: linear;
     transition-delay: 0;
 }
+
 #register {
     font-family: 'Cantarell', sans-serif;
-}
-.post {
-    font-size: 17px;
 }
 #container {
     width: 25%;
@@ -61,7 +59,7 @@ footer {
     #container{
         width: 50%;
     }
-
+    
 }
 @media screen and (max-width:513px){
     #container{
