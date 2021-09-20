@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
+import {BiSad} from 'react-icons/bi';
 
-const NotFoundPage = () => {
-    return (
-        <div>
-            <h4>404: Page not Found</h4>
-        </div>
-    )
+const NotFoundPage = () => (
+    
+            <h1 className="mt-5 pt-4 mx-auto text-center">404: Page not Found <BiSad/> </h1>
+        
+);
+const removeClear = () => {
+    let clear = document.querySelector ("#footer")
+    clear.parentNode.removeChild(clear)
+    console.log(clear)
 }
 
-export default NotFoundPage
+removeClear();
+
+export default NotFoundPage;
