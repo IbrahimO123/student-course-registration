@@ -11,8 +11,8 @@ function App() {
      <Router>
      <Navigate/>
      <Switch>
-       <Route path="/" exact component={Login} />
-       <Route path="/Register" component={Register} />
+       <Route path="/"  exact component={Login} />
+       <Route path="/Register" exact component={Register} />
        <Route component={NotFoundPage} />
      </Switch>
      </Router>
