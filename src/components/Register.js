@@ -131,7 +131,8 @@ const styleFornav = {
        programme : "300 Full Time",
        school : "Faulty Of Engineering",
      }
-     const today = Date();  
+     const today =  Date();
+  
 ///////////////----------------------Student Details-----------///////////////////////////////////////////////////////
 ///////////////////////////////////----------------Return HTML---------------/////////////////////////////////////////
     return (
