@@ -40,7 +40,7 @@ function Login() {
          paddingTop : 70,
      }
     return (
-        <div className="container-fluid mx-auto mt-5" style={styleFornav} >
+        <div className="container container-fluid mx-auto mt-5" style={styleFornav} >
             <div className="container py-3 bg-light" id="container">
             <form onSubmit={submitForm} >
             <div className="text-center">
