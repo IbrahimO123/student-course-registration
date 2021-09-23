@@ -20,8 +20,19 @@ function Login() {
     const changeMatricNo = (e) => {setMatricNo(e.target.value)}
     const changePassword = (e) => {setPassword(e.target.value)}
     const submitForm = (e) => {
-        alert(`Your Matric No is: ${matricNo}  While Your Password is: ${password} `);
+       // alert(`Your Matric No is: ${matricNo}  While Your Password is: ${password} `);
         e.preventDefault();
+        let matric = document.getElementById("matricNo");
+        let code = document.getElementById("password");
+
+        let matricValue = matric.value.trim();
+        let codeValue = code.value.trim();
+        if (matricValue === "Ibrahim" && codeValue === "Oliyide") {
+            window.location.href ="./Register"
+        } else {
+            alert("Invalid Username or Password")
+        }
+
     }
 
     function ChangingBackground() {
@@ -51,7 +62,7 @@ function Login() {
             </div>
                 <div className="form-group pb-2">
                     <label className="form-control-label" htmlFor="matric">Your Matric Number:</label>
-                    <input className="form-control" name="matric_no" value={matricNo} onChange={(e) => changeMatricNo(e)}  autoComplete={matricNo} autoFocus required type='text' placeholder="Matric number" tabIndex="1" ></input>
+                    <input className="form-control" id="matricNo" name="matric_no" value={matricNo} onChange={(e) => changeMatricNo(e)}  autoComplete={matricNo} autoFocus required type='text' placeholder="Matric number" tabIndex="1" ></input>
                 </div>
                 <div className="form-group pb-2">
                     <label className="form-control-label" htmlFor="password" >Password:</label>
