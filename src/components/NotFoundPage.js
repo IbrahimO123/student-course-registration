@@ -9,7 +9,6 @@ const NotFoundPage = () => (
 const removeClear = () => {
     let clear = document.querySelector ("#footer")
     clear.parentNode.removeChild(clear)
-    console.log(clear)
 }
 
 removeClear();
