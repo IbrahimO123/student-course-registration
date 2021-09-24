@@ -639,14 +639,14 @@ const styleFornav = {
   </div>
                 </div>
             <div>
-            <p>Student's Signature ..........................................<input type="file" ></input> Date..............................................................................</p>
+            <p>Student's Signature: <input type="file" ></input> Date: <input type="date" ></input></p>
                                  <p className="text-center border border-dark">FOR OFFICIAL USE ONLY</p>
              <p>Approval of Departmental Registration Officer</p>
-             <p> Name/Signature ................................................<input type="file" ></input>Date .............................................................................</p>
+             <p> Name/Signature: <input type="file" ></input>Date: <input type="date" ></input></p>
              <p>Approval of Head Of Department</p>
-             <p> Name/Signature ................................................<input type="file" ></input> Date ..........................................................................</p>
+             <p> Name/Signature: <input type="file" ></input> Date: <input type="date" ></input></p>
              <p>Endorsement of School Officer [for Dean]</p>
-                 <p> Name/Signature ................................................<input type="file" ></input> Date .......................................................................</p>
+                 <p> Name/Signature: <input type="file" ></input> Date: <input type="date" ></input></p>
             
             </div>
             </form>
